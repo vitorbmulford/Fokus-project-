@@ -61,7 +61,7 @@ function alterarContexto(contexto) {
   html.setAttribute("data-contexto", contexto);
   
   // Atualiza a imagem do banner conforme o contexto
-  banner.setAttribute("src", `/imagens/${contexto}.png`);
+  banner.setAttribute("src", `./imagens/${contexto}.png`);
 
   // Define o título de acordo com o contexto
   switch (contexto) {
@@ -129,7 +129,7 @@ function inicarOuPausar() {
   }
   audioPlay.play();
   intervaloId = setInterval(contagemRegressiva, 1000);
-  logoPauseOuplay.setAttribute("src", `/imagens/pause.png`);
+  logoPauseOuplay.setAttribute("src", `./imagens/pause.png`);
   inicarOuPausarBt.textContent = "Pausar";
 }
 
@@ -137,7 +137,7 @@ function inicarOuPausar() {
 function zerar() {
   clearInterval(intervaloId);
   inicarOuPausarBt.textContent = "Começar";
-  logoPauseOuplay.setAttribute("src", `/imagens/play_arrow.png`);
+  logoPauseOuplay.setAttribute("src", `./imagens/play_arrow.png`);
   intervaloId = null;
 }
 
